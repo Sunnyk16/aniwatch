@@ -7,11 +7,16 @@ import App from './App';
 import Home from './views/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Contact from './views/Contact/Contact';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Home/>,
+  },
+  {
+    path: "/contact",
+    element:<Contact/>
   },
  
 ]);
