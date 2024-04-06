@@ -7,14 +7,14 @@ function Footer() {
         <div className="me-5 d-none d-lg-block">
           <span>Get connected with us on social networks:</span>
         </div>
-        <div>
+        {/* <div>
           <a href="/" className="me-4 text-reset text-decoration-none ">Facebook</a>
           <a href="/" className="me-4 text-reset text-decoration-none ">Twitter</a>
           <a href="/" className="me-4 text-reset text-decoration-none ">Google</a>
           <a href="/" className="me-4 text-reset text-decoration-none ">Instagram</a>
           <a href="/" className="me-4 text-reset text-decoration-none ">LinkedIn</a>
           <a href="/" className="me-4 text-reset text-decoration-none ">GitHub</a>
-        </div>
+        </div> */}
       </section>
       <section className="">
         <div className="container text-center text-md-start mt-5">

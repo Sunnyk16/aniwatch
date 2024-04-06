@@ -10,7 +10,7 @@ function Navbar() {
         
         <div className="container-fluid text-white ">
           <a className="navbar-brand text-white" href="#">
-            Navbar
+            Aniwatch
           </a>
           <button
             className="navbar-toggler"
