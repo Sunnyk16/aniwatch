@@ -8,6 +8,7 @@ import Home from './views/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Contact from './views/Contact/Contact';
+import SearchPage from './views/SearchPage/SearchPage';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element:<Contact/>
   },
+  {
+    path:'/search',
+    element:<SearchPage/>
+  }
  
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -1,16 +1,12 @@
 import React from 'react'
+import SearchPage from '../SearchPage/SearchPage'
+
 
 function Home() {
   return (
     <div>
         
-        <div>
-            <h1>hello there!</h1>
-
-        </div>
-        <div>
-            <button className='bg-danger '>click me</button>
-        </div>
+       <SearchPage/>
     </div>
   )
 }
