@@ -7,9 +7,9 @@ import './index.css';
 import Home from './views/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import Signup from './views/Signup/SignUp.js';
 import Login from './views/Login/Login.js';
-import App from './App.js';
+import Signup from './views/Signup/Signup.js';
+
 //import Login from './views/Login/Login.js'
 
 const router = createBrowserRouter([
