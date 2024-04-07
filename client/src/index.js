@@ -9,9 +9,10 @@ import Home from './views/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Contact from './views/Contact/Contact';
-import SearchPage from './views/SearchPage/SearchPage';
+
 import Login from "./views/Login/Login.js";
 import Signupform from "./views/Signup/Signupform.js";
+import SearchPage from "./views/SearchPage/SearchPage.js";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
+  {
+    path:'/search',
+    element:<SearchPage/>
+  }
+
   
 
 ]);
