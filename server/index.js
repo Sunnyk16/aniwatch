@@ -1,66 +1,86 @@
-import express from 'express';
-import cors from 'cors'
-import { mongoose } from 'mongoose';
-import UserModel from './models/User.js';
-import dotenv from 'dotenv'
+import express from "express";
+import cors from "cors";
+import  mongoose  from "mongoose";
+import UserModel from "./models/User.js";
+import MovieModel from "./models/MoviesData.js"
+import dotenv from "dotenv";
 dotenv.config();
 
-
-
-const app = express()
-app.use(express.json())
-app.use(cors())
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 const PORT = 5000;
 
+app.get("/health", (req, res) => {
+  res.json({ status: "All Good!" });
+});
 
+app.post("/register", (req, res) => {
+  UserModel.create(req.body)
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
+});
 
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  UserModel.findOne({ email: email }).then((user) => {
+    if (user) {
+      if (user.password === password) {
+        res.json("Success");
+      } else {
+        res.json("The password is incorrect");
+      }
+    } else {
+      res.json("No user Existed");
+    }
+  });
+});
 
-app.get('/health', (req, res) => {
-    res.json({status: 'All Good!'})
-})
+app.post(`/moviedata`, async (req, res) => {
+  const { img, title, content, gener } = req.body;
 
+  if (!title || !content || !img || !gener) {
+    return res.json({
+      Success: false,
+      message: "fields are required",
+      data: null,
+    });
+  }
 
-app.post('/register',(req,res)=>{
-    UserModel.create(req.body)
-    .then(users =>res.json(users))
-    .catch( err => res.json(err))
+  const newMovie = await MovieModel.create({
+    img: img,
+    title: title,
+    content: content,
+    gener: gener,
+  });
 
-})
+  res.json({
+    Success: true,
+    message: "movie added successfully",
+    data: newMovie,
+  });
+});
 
-app.post('/login',(req,res)=>{
-    const {email,password}=req.body;
-    UserModel.findOne({email:email})
-    .then(user =>{
-        if(user){
-            if(user.password===password){
-                res.json('Success')
-            }else{
-                res.json('The password is incorrect')
-            }
-        }else{
-            res.json('No user Existed')
-        }
+app.get("/moviedata",async (req,res)=>{
+    const movie =await MovieModel.find();
+    res.json({
+        success: true,
+    message: "data fetched successfully",
+    data: movie,
     })
 })
-
-
-
-
-
-
-
-
-
+ 
 //database connection
-const connectDb=async ()=>{
-    await mongoose.connect("mongodb+srv://suchitathorat:St9096377929@suchiiii.d3yvuie.mongodb.net")
-    console.log("Database Connected")
-}
+const connectDb = async () => {
+  await mongoose.connect(
+    process.env.DB_URI
+  ).then(data=>console.log("connected")).catch(err=>console.log(err));
+};
 connectDb();
 
+app.listen(PORT, () => { 
+  console.log(`Server is running on port ${PORT}.`);
+});
 
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`)
-})
