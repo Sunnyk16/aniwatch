@@ -1,0 +1,55 @@
+.signup-container{
+    background-image: url(bg-img.avif);
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content:center;
+    height:100vh;
+}
+
+.signup-form-container{
+    margin-left: 50%;
+    margin-top: 10%;
+    border: 5px solid white;
+    height: 600px;
+    padding: 50px;
+    border-radius: 10px;
+
+
+}
+
+.input{
+    background-color:white;
+    padding: 10px;
+    width:330px;
+    border-radius: 7px;
+    
+}
+
+
+    
+.text{
+    color: white;
+    padding: 7px;
+}
+
+.heading{
+    color: white;
+    text-align: center;
+}
+
+
+/* d-flex 
+justify-content-center
+ align-items
+  bg-secondary vh-100 */
+
+  /* 
+  bg-white p-3 rounded w-25 */
+
+  /* form-control rounded-0 */
+
+  /* btn 
+  btn-default
+   border
+    w-100 bg-light rounded-0 text-decoration-none */
