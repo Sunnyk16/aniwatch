@@ -4,11 +4,11 @@ import './SearchPage.css';
 
 const SearchPage = () => {
   const handleSearch = () => {
-    // search functionality here
+    
     console.log("Search button clicked");
   };
 
-  // Dummy movie data 
+  
   const movies = [
     { title: "Movie 1", genre: "Horror", year: "2022", imageUrl: "https://via.placeholder.com/150" },
     { title: "Movie 2", genre: "Horror", year: "2022", imageUrl: "https://via.placeholder.com/150" },
@@ -16,10 +16,8 @@ const SearchPage = () => {
     { title: "Movie 4", genre: "Romance", year: "2020", imageUrl: "https://via.placeholder.com/150" },
     { title: "Movie 5", genre: "Romance", year: "2020", imageUrl: "https://via.placeholder.com/150" },
     { title: "Movie 6", genre: "Comedy", year: "2021", imageUrl: "https://via.placeholder.com/150" },
-    { title: "Movie 7", genre: "Horror", year: "2021", imageUrl: "https://via.placeholder.com/150" },
-    { title: "Movie 8", genre: "Comedy", year: "2021", imageUrl: "https://via.placeholder.com/150" },
-    { title: "Movie 9", genre: "Romance", year: "2021", imageUrl: "https://via.placeholder.com/150" },
-    { title: "Movie 10", genre: "Comedy", year: "2021", imageUrl: "https://via.placeholder.com/150" }
+    { title: "Movie 8", genre: "Horror", year: "2021", imageUrl: "https://via.placeholder.com/150" }
+   
   ];
 
   return (
