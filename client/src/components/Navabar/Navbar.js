@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg bg-dark bg-gradient "
+        className="navbar navbar-expand-lg bg-dark  "
         aria-label="Eleventh navbar example"
       >
         
