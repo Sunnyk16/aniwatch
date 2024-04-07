@@ -9,10 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import Login from "./views/Login/Login.js";
-import Signup from "./views/Signup/SignUp.js";
-
 
 import Contact from "./views/Contact/Contact";
+import Signupform from "./views/Signup/Signupform.js";
+
 
 const router = createBrowserRouter([
   {
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
 
   {
     path: "/register",
-    element: <Signup />,
+    element: <Signupform/>
   },
 
   {
