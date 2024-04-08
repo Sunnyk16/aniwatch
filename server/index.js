@@ -6,9 +6,29 @@ import MovieModel from "./models/MoviesData.js"
 import dotenv from "dotenv";
 dotenv.config();
 
+// const app = express();
+// app.use(express.json());
+// app.use(cors());
 const app = express();
+app.use(cors(
+  {
+    credentials:true,
+    origin:[process.env.ORIGIN1,process.env.ORIGIN2]
+  }
+));
 app.use(express.json());
-app.use(cors());
+
+const connectDb = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URL);
+    console.log("connected to database");
+    
+  } catch (error) {
+    console.log("error is here", error);
+    
+  }
+};
+connectDb();
 
 const PORT = 5000;
 
@@ -72,12 +92,12 @@ app.get("/moviedata",async (req,res)=>{
 })
  
 //database connection
-const connectDb = async () => {
-  await mongoose.connect(
-    process.env.DB_URI
-  ).then(data=>console.log("connected")).catch(err=>console.log(err));
-};
-connectDb();
+// const connectDb = async () => {
+//   await mongoose.connect(
+//     process.env.DB_URI
+//   ).then(data=>console.log("connected")).catch(err=>console.log(err));
+// };
+// connectDb();
 
 app.listen(PORT, () => { 
   console.log(`Server is running on port ${PORT}.`);
