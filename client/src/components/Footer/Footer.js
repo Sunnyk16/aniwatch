@@ -20,7 +20,7 @@ function Footer() {
             <h6 className="text-uppercase fw-bold mb-4 text-blue">Products</h6>
             <ul className="list-unstyled">
               <li>
-                <Link to={`/home`} className="text-reset text-decoration-none">
+                <Link to={`/`} className="text-reset text-decoration-none">
                   Home
                 </Link>
               </li>

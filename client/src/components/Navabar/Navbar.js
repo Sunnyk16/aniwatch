@@ -10,9 +10,9 @@ function Navbar() {
       >
         
         <div className="container-fluid text-white ">
-          <a className="navbar-brand text-white" href="#">
+          <Link to={`/`} className="navbar-brand text-white">
             Aniwatch
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
