@@ -49,11 +49,11 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <Link to={`/login`} className="text-decoration-none">
+                {/* <Link to={`/login`} className="text-decoration-none">
                 <a className="nav-link text-white text-capitalize" href="#">
                   sign in
                 </a>
-                </Link>
+                </Link> */}
               </li>
               {/* dropdown */}
               {/* <li className="nav-item dropdown">
