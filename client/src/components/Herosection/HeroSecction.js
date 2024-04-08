@@ -19,9 +19,9 @@ function HeroSecction() {
             <img src={Img1} className="d-block w-100 carousel-image" alt="Slide 1" />
             <div className="container">
               <div className="carousel-caption text-start text-whie ">
-                <h1>Avenger Endgame.</h1>
-                <p className="opacity-75">Avengers: Endgame is the epic conclusion to the Marvel Cinematic Universe's Infinity Saga. The Avengers embark on a mission to undo Thanos' snap, leading to a climactic battle and emotional farewells.</p>
-                <p><Link className="btn btn-sm btn-info" to="/">Explore</Link></p>
+                <h1 className="fw-bold display-4 display-lg-1">Avenger Endgame.</h1>
+                <p className="opacity-75 fs-6 fs-md-5">Avengers: Endgame is the epic conclusion to the Marvel Cinematic Universe's Infinity Saga. The Avengers embark on a mission to undo Thanos' snap, leading to a climactic battle and emotional farewells.</p>
+                <p><Link className="btn btn-sm btn-primary" to="/">Explore</Link></p>
               </div>
             </div>
           </div>
@@ -29,9 +29,9 @@ function HeroSecction() {
             <img src={Img2} className="d-block w-100 carousel-image" alt="Slide 2" />
             <div className="container">
               <div className="carousel-caption text-white ">
-                <h1>iron man </h1>
-                <p>Iron Man is the inaugural film in the Marvel Cinematic Universe, starring Robert Downey Jr. as Tony Stark. It chronicles his transformation into the armored superhero and his battle against a formidable adversary.</p>
-                <p><Link className="btn btn-sm btn-info" to="/">Explore</Link></p>
+                <h1 className="fw-bold display-4 display-lg-1">iron man </h1>
+                <p className="fs-6 fs-md-5">Iron Man is the inaugural film in the Marvel Cinematic Universe, starring Robert Downey Jr. as Tony Stark. It chronicles his transformation into the armored superhero and his battle against a formidable adversary.</p>
+                <p><Link className="btn btn-sm btn-primary" to="/">Explore</Link></p>
               </div>
             </div>
           </div>
@@ -39,9 +39,9 @@ function HeroSecction() {
             <img src={Img3} className="d-block w-100 carousel-image" alt="Slide 3" />
             <div className="container">
               <div className="carousel-caption text-start">
-                <h1>Black Panther</h1>
-                <p>Black Panther is a groundbreaking Marvel film, featuring Chadwick Boseman as T'Challa, the titular hero and king of Wakanda. It explores themes of identity, power, and responsibility amidst political intrigue and stunning action.</p>
-                <p><Link className="btn btn-sm btn-info" to="/">Explore</Link></p>
+                <h1 className="fw-bold display-4 display-lg-1">Black Panther</h1>
+                <p className="fs-6 fs-md-5">Black Panther is a groundbreaking Marvel film, featuring Chadwick Boseman as T'Challa, the titular hero and king of Wakanda. It explores themes of identity, power, and responsibility amidst political intrigue and stunning action.</p>
+                <p><Link className="btn btn-sm btn-primary" to="/">Explore</Link></p>
               </div>
             </div>
           </div>

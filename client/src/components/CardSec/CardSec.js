@@ -1,18 +1,16 @@
 import React from "react";
+import "./CardSec.css"; 
 
-function CardSec({ movie }) { // Destructure movie from props
+function CardSec({ movie }) {
   const { _id, img, title, content } = movie;
   return (
-    <div>
-      
-        <div className="card h-100">
-          <img src={img} className="card-img-top" alt="City Lights" />
-          <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">{content}</p>
-          </div>
-        </div>
-      
+    <div className="card custom-card w-100 h-auto  cardh  ">
+      <img src={img} className="card-img-top " alt={title} />
+      <div className="card-body">
+        <h5 className="card-title fw-bolder fs-3">{title}</h5>
+        <p className="card-text">{content.substring(0,80)}</p>
+        <button className="btn btn-primary btn-sm ">Explore</button>
+      </div>
     </div>
   );
 }

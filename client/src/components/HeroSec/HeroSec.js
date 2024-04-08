@@ -3,7 +3,7 @@ import backgroundImage from './img12.jpg'; // Import the image
 
 function HeroSec() {
   return (
-    <div>
+    <div className='m-1'>
       <div className="container col-xxl-8 px-4 py-1 mt-3" style={{backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' ,width:'100%'}}>
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-lg-6">

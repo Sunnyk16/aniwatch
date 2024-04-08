@@ -84,14 +84,9 @@ function Navbar() {
                 </ul>
               </li> */}
             </ul>
-            <form role="search">
-              <input
-                className="form-control"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
+            <Link to={`/login`}>
+            <button className="btn btn-primary text-capitalize "> sign in</button>
+            </Link>
           </div>
         </div>
       </nav>
