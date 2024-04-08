@@ -83,7 +83,7 @@ function Navbar() {
                   </li>
                 </ul>
               </li> */}
-              {/* ....... */}
+              
             </ul>
             <Link to={`/login`}>
             <button className="btn btn-primary text-capitalize "> sign in</button>
