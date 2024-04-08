@@ -31,8 +31,8 @@ function Home() {
           <HeroSec />
         </div>
 
-        <div>
-          <h1 className="text-capitalize mt-3 fw-bolder  m-lg-1 ">Drama</h1>
+        <div className="p-1">
+          <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">Drama</h1>
           <Section genre="Drama" />
         </div>
 
