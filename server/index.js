@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import  mongoose  from "mongoose";
 import UserModel from "./models/User.js";
-import MovieModel from "./models/MoviesData.js"
+import MovieModel from "./models/MoviesData.js";
+import Contact from "./models/Contact.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -90,6 +91,50 @@ app.get("/moviedata",async (req,res)=>{
     data: movie,
     })
 })
+
+// Contact form api
+
+app.post("/contacts", async(req, res) => {
+  const {firstName, lastName, email, address, message } = req.body;
+
+  const newContact = await Contact.create({
+      "firstName": firstName,
+      "lastName": lastName,
+      "email": email,
+      "address": address,
+      "message": message
+  })
+
+  res.json({
+      success: true,
+      message: "Contact added successfully",
+      data: newContact
+  })
+})
+
+app.get("/contacts", async (req, res)=>{
+
+  const contacts = await Contact.find();
+
+  res.json({
+      success: true,
+      message: "Data fetch successfully",
+      data: contacts
+  })
+})
+
+app.delete("/contacts/:id", async(req, res)=>{
+  const {id} = req.params;
+
+  await Contact.deleteOne({_id: id})
+
+  res.json({
+      success: true,
+      message: "Data deleted successfully",
+      data: null
+  })
+})
+
  
 //database connection
 // const connectDb = async () => {
