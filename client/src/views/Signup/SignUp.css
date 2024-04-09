@@ -18,26 +18,45 @@
 
 }
 
-.input{
+.background{
+    background-image: url(img-1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+  
+}
+
+/* .input{
     background-color:white;
     padding: 10px;
-    width:330px;
+    width:300px;
     border-radius: 7px;
     
-}
+} */
 
 
     
 .text{
-    color: white;
+    color: black;
     padding: 7px;
 }
 
 .heading{
-    color: white;
+    color: black;
     text-align: center;
+    font-size: 30px;
 }
 
+/* .paragraph{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+} */
+
+/* .form{
+    margin-left:60%;
+    margin-top: -30%;
+} */
 
 /* d-flex 
 justify-content-center

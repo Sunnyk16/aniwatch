@@ -1,3 +1,14 @@
+/* .bg-image{
+    background-image: url(img-bg.avif);
+
+} */
+.body{
+    background-color: blue;
+}
+
+/* container col-xl-10 col-xxl-8 px-4 py-5 */
+
+
 .signup-container{
     background-image: url(bg-img.avif);
     background-repeat: no-repeat;
@@ -36,6 +47,16 @@
 .heading{
     color: white;
     text-align: center;
+}
+
+
+.background{
+    background-image: url(img-2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+
+  
 }
 
 
