@@ -13,6 +13,7 @@ import Contact from './views/Contact/Contact';
 import Login from "./views/Login/Login.js";
 import Signupform from "./views/Signup/Signupform.js";
 import SearchPage from "./views/SearchPage/SearchPage.js";
+import Dashboard from "./views/Dashboard/Dashboard.js";
 
 
 const router = createBrowserRouter([
@@ -32,9 +33,17 @@ const router = createBrowserRouter([
   },
 
   {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+
+  {
     path: "/contact",
     element: <Contact />,
-  },
+  }, 
+
+
+
   {
     path:'/search',
     element:<SearchPage/>

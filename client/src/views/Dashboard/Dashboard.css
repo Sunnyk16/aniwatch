@@ -1,0 +1,31 @@
+.home {
+    margin-top: 208px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 150vh;
+    position:relative;
+}
+
+.content {
+    overflow: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.home .content .col-md-3 {
+    border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+

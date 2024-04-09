@@ -44,9 +44,11 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
+              <Link to={`/dashboard`} className="text-decoration-none ">
                 <a className="nav-link text-white text-capitalize" href="#">
                   dashboard
                 </a>
+                </Link>
               </li>
               <li className="nav-item">
                 {/* <Link to={`/login`} className="text-decoration-none">
@@ -96,3 +98,10 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
+
+
+
+
