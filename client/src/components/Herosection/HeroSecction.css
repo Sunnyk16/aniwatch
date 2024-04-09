@@ -9,4 +9,8 @@
   .text-black {
     color: black;
   }
+  .carousel-image {
+    height: auto;
+    max-height: 650px; /* Adjust this value as needed */
+  }
   

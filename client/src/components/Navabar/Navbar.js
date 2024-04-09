@@ -5,14 +5,14 @@ function Navbar() {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg bg-dark bg-gradient "
+        className="navbar navbar-expand-lg bg-dark  "
         aria-label="Eleventh navbar example"
       >
         
         <div className="container-fluid text-white ">
-          <a className="navbar-brand text-white" href="#">
+          <Link to={`/`} className="navbar-brand text-white">
             Aniwatch
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -49,11 +49,11 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <Link to={`/login`} className="text-decoration-none">
+                {/* <Link to={`/login`} className="text-decoration-none">
                 <a className="nav-link text-white text-capitalize" href="#">
                   sign in
                 </a>
-                </Link>
+                </Link> */}
               </li>
               {/* dropdown */}
               {/* <li className="nav-item dropdown">
@@ -83,15 +83,11 @@ function Navbar() {
                   </li>
                 </ul>
               </li> */}
+              
             </ul>
-            <form role="search">
-              <input
-                className="form-control"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
+            <Link to={`/login`}>
+            <button className="btn btn-primary text-capitalize "> sign in</button>
+            </Link>
           </div>
         </div>
       </nav>

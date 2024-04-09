@@ -1,10 +1,14 @@
 import React from "react";
 import '../Herosection/HeroSecction.css'
+import Img1 from './img3.jpg';
+import Img2 from './img4.jpg';
+import Img3 from './img5.jpg';
+import { Link } from 'react-router-dom';
 
 function HeroSecction() {
   return (
-    <div>
-      <div id="myCarousel" className="carousel slide mb-6 custom-carousel" data-bs-ride="carousel">
+    <div className='carousel-size' style={{ width: '100%', overflow: 'hidden' }}>
+      <div id="myCarousel" className="carousel slide mb-6" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -12,37 +16,32 @@ function HeroSecction() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <div className="container col-xxl-8 px-4 py-5">
-              <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div className="col-10 col-sm-8 col-lg-6 " style={{backgroundColor:"tomato"}}>
-                  {/* <img src="bootstrap-themes.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" /> */}
-                </div>
-                <div className="col-lg-6">
-                  <h1 className="display-5 fw-bold text-purple lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                  <p className="lead text-white">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                  <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                    <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
-                  </div>
-                </div>
+            <img src={Img1} className="d-block w-100 carousel-image" alt="Slide 1" />
+            <div className="container">
+              <div className="carousel-caption text-start text-whie ">
+                <h1 className="fw-bold display-4 display-lg-1">Avenger Endgame.</h1>
+                <p className="opacity-75 fs-6 fs-md-5">Avengers: Endgame is the epic conclusion to the Marvel Cinematic Universe's Infinity Saga. The Avengers embark on a mission to undo Thanos' snap, leading to a climactic battle and emotional farewells.</p>
+                <p><Link className="btn btn-sm btn-primary" to="/">Explore</Link></p>
               </div>
             </div>
           </div>
-          {/* Repeat the above code block for other carousel items */}
           <div className="carousel-item">
-            <div className="container col-xxl-8 px-4 py-5">
-              <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div className="col-10 col-sm-8 col-lg-6">
-                  {/* <img src="bootstrap-themes.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" /> */}
-                </div>
-                <div className="col-lg-6">
-                  <h1 className="display-5 fw-bold text-purple lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                  <p className="lead text-white">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-                  <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                    <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
-                  </div>
-                </div>
+            <img src={Img2} className="d-block w-100 carousel-image" alt="Slide 2" />
+            <div className="container">
+              <div className="carousel-caption text-white ">
+                <h1 className="fw-bold display-4 display-lg-1">iron man </h1>
+                <p className="fs-6 fs-md-5">Iron Man is the inaugural film in the Marvel Cinematic Universe, starring Robert Downey Jr. as Tony Stark. It chronicles his transformation into the armored superhero and his battle against a formidable adversary.</p>
+                <p><Link className="btn btn-sm btn-primary" to="/">Explore</Link></p>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img src={Img3} className="d-block w-100 carousel-image" alt="Slide 3" />
+            <div className="container">
+              <div className="carousel-caption text-start">
+                <h1 className="fw-bold display-4 display-lg-1">Black Panther</h1>
+                <p className="fs-6 fs-md-5">Black Panther is a groundbreaking Marvel film, featuring Chadwick Boseman as T'Challa, the titular hero and king of Wakanda. It explores themes of identity, power, and responsibility amidst political intrigue and stunning action.</p>
+                <p><Link className="btn btn-sm btn-primary" to="/">Explore</Link></p>
               </div>
             </div>
           </div>
@@ -55,7 +54,6 @@ function HeroSecction() {
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
         </button>
-        
       </div>
     </div>
   );

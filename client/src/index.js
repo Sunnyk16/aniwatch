@@ -17,7 +17,7 @@ import SearchPage from "./views/SearchPage/SearchPage.js";
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
   },
 
@@ -38,15 +38,19 @@ const router = createBrowserRouter([
   {
     path:'/search',
     element:<SearchPage/>
-  }
+  },
+  // {
+  //   path: "*",
+  //   element: <Home />, 
+  // }
 
   
 
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <>
+  <div className="ruby">
     <Toaster />
     <RouterProvider router={router} />
-  </>
+  </div>
 );

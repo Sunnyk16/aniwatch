@@ -1,0 +1,37 @@
+/* CardSec.css */
+.h-85 {
+    height: 300px;
+  }
+  
+  .custom-card {
+    border: none; /* Remove default card border */
+    border-radius: 0.5rem;
+    /* overflow: hidden; */
+    box-shadow: 0 0 2px rgba(249, 244, 244, 0.936); /* Add shadow */
+    height: 300px;
+    width: 300px;
+  }
+  
+  .card-img-top {
+    height: 250px;
+    width: auto; /* Set image height */
+    object-fit: cover; /* Ensure image covers the entire space */
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+  }
+  
+  .btn-primary {
+    border-radius: 5px; /* Adjust button border radius */
+  }
+  
+   .custom-card:hover {
+    transform: scale(0.9);
+    transition: 0.3s ease-in-out;
+  }
+  
