@@ -7,17 +7,17 @@ import Contact from "./models/Contact.js";
 import dotenv from "dotenv";
 dotenv.config();
 
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
 const app = express();
-app.use(cors(
-  {
-    credentials:true,
-    origin:[process.env.ORIGIN1,process.env.ORIGIN2]
-  }
-));
 app.use(express.json());
+app.use(cors());
+// const app = express();
+// app.use(cors(
+//   {
+//     credentials:true,
+//     origin:[process.env.ORIGIN1,process.env.ORIGIN2]
+//   }
+// ));
+// app.use(express.json());
 
 const connectDb = async () => {
   try {
@@ -96,6 +96,38 @@ app.get("/moviedata",async (req,res)=>{
 
 app.post("/contacts", async(req, res) => {
   const {firstName, lastName, email, address, message } = req.body;
+
+  if(!firstName){
+    return res.json({
+      success: false,
+      message:"First name is required",
+      data: null
+    })
+  }
+
+  if(!lastName){
+    return res.json({
+      success: false,
+      message:"Last name is required",
+      data: null
+    })
+  }
+
+  if(!email){
+    return res.json({
+      success: false,
+      message:"Email is required",
+      data: null
+    })
+  }
+
+  if(!message){
+    return res.json({
+      success: false,
+      message:"Message is required",
+      data: null
+    })
+  }
 
   const newContact = await Contact.create({
       "firstName": firstName,
