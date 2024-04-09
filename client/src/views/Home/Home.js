@@ -13,6 +13,7 @@ function Home() {
         <div>
           <Navbar />
         </div>
+        {/* .. */}
 
         <div className="">
           <HeroSecction />
