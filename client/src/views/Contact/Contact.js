@@ -45,7 +45,7 @@ function Contact() {
 
       <div className='bg-secondary py-5'>
 
-        <h1 className='fw-bold text-center py-4 text-white heading'>Contact US</h1>
+        <h1 className='fw-bold text-center py-4 text-white heading-1'>Contact US</h1>
 
         <div className='card bg-dark'>
 
