@@ -16,6 +16,7 @@ import SearchPage from "./views/SearchPage/SearchPage.js";
 import Dashboard from "./views/Dashboard/Dashboard.js";
 
 import ContactsView from "./views/ContactsView/ContactsView.js";
+import Feedback from "./components/Feedback/Feedback.js";
 
 
 
