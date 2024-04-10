@@ -14,7 +14,10 @@ import Login from "./views/Login/Login.js";
 import Signupform from "./views/Signup/Signupform.js";
 import SearchPage from "./views/SearchPage/SearchPage.js";
 import Dashboard from "./views/Dashboard/Dashboard.js";
-import Feedback from "./components/Feedback/Feedback.js";
+
+import ContactsView from "./views/ContactsView/ContactsView.js";
+
+
 
 
 const router = createBrowserRouter([
@@ -42,6 +45,11 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   }, 
+
+  {
+    path: "/view-contact",
+    element: <ContactsView/>
+  },
 
 
 
