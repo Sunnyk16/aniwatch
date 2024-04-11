@@ -4,7 +4,7 @@ const MovieSchema = new mongoose.Schema({
     img: String,
     title: String,
     content: String,
-    gener: String,
+    genre: String,
 });
 
 const MovieModel = mongoose.model('Movie', MovieSchema);

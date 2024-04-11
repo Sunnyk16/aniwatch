@@ -62,7 +62,7 @@ app.post("/login", (req, res) => {
 app.post(`/moviedata`, async (req, res) => {
   const { img, title, content, gener } = req.body;
 
-  if (!title || !content || !img || !gener) {
+  if (!title || !content || !img || !genre) {
     return res.json({
       Success: false,
       message: "fields are required",
@@ -74,7 +74,7 @@ app.post(`/moviedata`, async (req, res) => {
     img: img,
     title: title,
     content: content,
-    gener: gener,
+    genre: genre,
   });
 
   res.json({

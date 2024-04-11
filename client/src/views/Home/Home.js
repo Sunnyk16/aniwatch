@@ -25,7 +25,7 @@ function Home() {
             <p className="text-capitalize  fw-bolder  text-white fs-24 mx-2 ">
               Action
             </p>
-            <Section genre="Action" />
+            <Section genre="action" />
           </div>
         </div>
 
