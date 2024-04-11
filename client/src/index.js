@@ -63,6 +63,10 @@ const router = createBrowserRouter([
     path: "/feedback",
     element: <Feedback />,
   },
+  {
+    path: "/aboutus",
+    element: <Aboutus/>,
+  },
   // {
   //   path: "*",
   //   element: <Home />,

@@ -25,6 +25,18 @@
     box-shadow: 2px 2px 10px  gray;
 
 }
+.card1{
+    height: 600px;
+    object-fit: cover;
+}
+.fs-f{
+    font-size: 100px;
+}
+.fs-t{
+    font-size: 40px;
+    margin: 0 30px;
+    margin-top: 120px;
+}
    
 
 @keyframes changeImage{
@@ -42,6 +54,24 @@
 
     75%{
         background-image: url(img-3.jpg);
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .card1{
+        height: 400px;
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+    }
+    .fs-f{
+        font-size: 50px;
+    }
+    .fs-t{
+        font-size: 20px;
+        margin: 0 30px;
+        margin-top: 120px;
     }
 
 }

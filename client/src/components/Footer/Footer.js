@@ -64,7 +64,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/aboutus" className="text-reset text-decoration-none">
+                <Link to={`/aboutus`} className="text-reset text-decoration-none">
                   About
                 </Link>
               </li>
