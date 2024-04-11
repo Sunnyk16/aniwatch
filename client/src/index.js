@@ -13,6 +13,7 @@ import Contact from "./views/Contact/Contact";
 import Login from "./views/Login/Login.js";
 import Signupform from "./views/Signup/Signupform.js";
 import SearchPage from "./views/SearchPage/SearchPage.js";
+import Aboutus from "./views/Aboutus/Aboutus.js";
 import Dashboard from "./views/Dashboard/Dashboard.js";
 
 import ContactsView from "./views/ContactsView/ContactsView.js";
