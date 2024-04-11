@@ -1,0 +1,47 @@
+.imgslider{
+    width:550px ;
+    height: 600px;
+    background-image: url(img-4.webp);
+    background-size: 100% 100%;
+    animation: changeImage 30s linear infinite;
+}
+
+.heading{
+    text-align: center;
+     margin-top:10px ;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #0d6efd;
+    font-weight: bold;
+    
+}
+
+.our-mission{
+    margin-top: 100px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+   
+    box-shadow: 2px 2px 10px  gray;
+
+}
+   
+
+@keyframes changeImage{
+    0%{
+        background-image: url(img-5.jpg);
+    }
+
+    25%{
+        background-image: url(img-1.jpg);
+    }
+
+    50%{
+        background-image: url(img-2.jpg);
+    }
+
+    75%{
+        background-image: url(img-3.jpg);
+    }
+
+}
