@@ -8,7 +8,7 @@ import DeleteIcon from './delete.png'
 function ContactCard({ _id, firstName, lastName, email, address, message, loadContacts }) {
 
     const deleteContact = async () => {
-        const response = await axios.delete(`${process.env.REACT_APP_API_URL2}/contacts/${_id}`);
+        const response = await axios.delete(`${process.env.REACT_APP_API_URL}/contacts/${_id}`);
 
         toast.success(response.data.message);
         loadContacts();
