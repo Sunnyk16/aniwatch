@@ -4,6 +4,7 @@ import  mongoose  from "mongoose";
 import UserModel from "./models/User.js";
 import MovieModel from "./models/MoviesData.js";
 import Contact from "./models/Contact.js";
+import Dashboard from "./models/Dashboard.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -181,6 +182,50 @@ app.delete("/contacts/:id", async(req, res)=>{
       data: null
   })
 })
+
+// Dashboard API
+
+
+app.get("/totalhours",async (req,res)=>{
+  const{id} = req.params;
+
+  await Dashboard.onclick({_id: id})
+
+  res.json({
+    success: true,
+    message: "added successfully",
+  })
+  })
+
+  app.get("/totalmovies",async (req,res)=>{
+    const{id} = req.params;
+
+  await Dashboard.onclick({_id: id})
+
+    
+    res.json({
+      success: true,
+      message: "added successfully",
+    })
+    })
+
+    
+    app.get("/totaladded",async (req,res)=>{
+      const{id} = req.params;
+
+  await Dashboard.onclick({_id: id})
+
+      res.json({
+        success: true,
+        message: "added successfully",
+      })
+      })
+
+      
+
+
+
+
 
  
 //database connection
