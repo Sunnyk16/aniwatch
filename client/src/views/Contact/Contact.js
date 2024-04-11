@@ -46,16 +46,16 @@ function Contact() {
 
       <div className='header-container d-flex justify-content-evenly'>
           <div>
-            <p className='main-heading'>How can we help you?</p>
+            <p className='main-heading text-black'>How can we help you?</p>
             <h1 className='heading-22 text-center'>Contact US</h1>
-            <h6 className='heading-title'>We’re here to help and answer any questions you<br />might have. We look forward to hearing from you!</h6>
+            <h6 className='heading-title '>We’re here to help and answer any questions you<br />might have. We look forward to hearing from you!</h6>
           </div>
           <img src={ContactImg} alt='' className='contact-img'/>
         </div>
 
       <div className='bg-black py-5'>
 
-        <div className='card bg-dark'>
+        <div className='card bg-dark mx-auto '>
 
           <form className="row g-3 p-5">
 
