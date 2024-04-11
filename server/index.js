@@ -195,6 +195,10 @@ app.get("/totalhours",async (req,res)=>{
 
     
     app.get("/totaladded",async (req,res)=>{
+      const{id} = req.params;
+
+  await Dashboard.onclick({_id: id})
+
       res.json({
         success: true,
         message: "added successfully",
