@@ -1,9 +1,37 @@
+.header-container{
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+.main-heading{
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+.heading-22{
+    font-size: 48px;
+    font-weight: bold;
+    width: 300px;
+    padding-left: 80px;
+}
+
+.heading-title{
+    font-size: 20px;
+    margin-top: 60px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.contact-img{
+    width: 400px;
+}
 
 .card{
     width: 70%;
     display: block;
     margin: 30px auto;
     margin-bottom: 0;
+    box-shadow: rgb(69, 116, 116) 0px 20px 30px -10px;
 }
 
 .heading{
@@ -11,11 +39,30 @@
 }
 
 @media only screen and (max-width: 600px){
+    .header-container{
+        flex-direction: column;
+        padding: 0;
+    }
+    .main-heading{
+        margin-top: 50px;
+    }
+    .heading-22{
+        font-size: 30px;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    .heading-title{
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .contact-img{
+        width: 250px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
     .card{
         width: 95%;
-    }
-    .heading{
-        font-size: 40px;
     }
     
 }

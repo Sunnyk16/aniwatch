@@ -7,7 +7,7 @@ function ContactsView() {
 
 
   const loadContacts = async () => {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL2}/contacts`);
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/contacts`);
 
     setContacts(response.data.data);
   }
