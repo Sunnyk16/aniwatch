@@ -1,5 +1,6 @@
 import React from "react";
 import "./CardSec.css"; 
+import { Link } from "react-router-dom";
 
 function CardSec({ movie }) {
   const { _id, img, title, content } = movie;
@@ -9,7 +10,8 @@ function CardSec({ movie }) {
       <div className="card-body">
         <h5 className="card-title fw-bolder fs-3">{title}</h5>
         <p className="card-text">{content.substring(0,80)}</p>
-        <button className="btn btn-primary btn-sm ">Explore</button>
+        <Link to={`/movieinfo/${_id}`}>
+        <button className="btn btn-primary btn-sm ">Explore</button></Link>
       </div>
     </div>
   );

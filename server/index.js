@@ -92,6 +92,21 @@ app.get("/moviedata",async (req,res)=>{
     })
 })
 
+app.get("/moviedata/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const note = await MovieModel.findOne({
+    _id: id,
+  });
+
+  res.json({
+    success: true,
+    message: "data fetched successfully",
+    data: note,
+  });
+});
+
+
 // Contact form api
 
 app.post("/contacts", async(req, res) => {
