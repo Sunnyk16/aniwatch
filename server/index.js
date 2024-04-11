@@ -60,7 +60,7 @@ app.post("/login", (req, res) => {
 });
 
 app.post(`/moviedata`, async (req, res) => {
-  const { img, title, content, gener } = req.body;
+  const { img, title, content, genre } = req.body;
 
   if (!title || !content || !img || !genre) {
     return res.json({
