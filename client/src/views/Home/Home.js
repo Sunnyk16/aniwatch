@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import Section from "../../components/Section/Section";
 import HeroSec from "../../components/HeroSec/HeroSec";
 import "../Home/Home.css";
+import HeroSec1 from "../../components/HeroSec1/HeroSec1";
 
 function Home() {
   return (
@@ -35,6 +36,9 @@ function Home() {
         <div className="p-1">
           <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">Drama</h1>
           <Section genre="Drama" />
+        </div>
+        <div>
+          <HeroSec1/>
         </div>
 
         <div>
