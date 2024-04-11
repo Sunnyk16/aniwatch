@@ -34,12 +34,18 @@ function Home() {
         </div>
 
         <div className="p-1">
-          <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">Drama</h1>
-          <Section genre="Drama" />
+          <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">Animation</h1>
+          <Section genre="animation" />
         </div>
         <div>
           <HeroSec1/>
         </div>
+        <div>
+        <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">Marvel</h1>
+        <Section genre="marvel"/>
+
+        </div>
+        
 
         <div>
           <Footer />
