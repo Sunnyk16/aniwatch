@@ -6,6 +6,7 @@ import Section from "../../components/Section/Section";
 import HeroSec from "../../components/HeroSec/HeroSec";
 import "../Home/Home.css";
 import HeroSec1 from "../../components/HeroSec1/HeroSec1";
+import SectionC from "../../components/SectionC/SectionC";
 
 function Home() {
   return (
@@ -34,18 +35,24 @@ function Home() {
         </div>
 
         <div className="p-1">
-          <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">Animation</h1>
+          <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">
+            Animation
+          </h1>
           <Section genre="animation" />
         </div>
         <div>
-          <HeroSec1/>
+          <HeroSec1 />
         </div>
         <div>
-        <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">Marvel</h1>
-        <Section genre="marvel"/>
-
+          <h1 className="text-capitalize  fw-bolder  text-white fs-24 mx-4 mt-3">
+            Marvel
+          </h1>
+          <Section genre="marvel" />
         </div>
-        
+
+        <div>
+          <SectionC/>
+        </div>
 
         <div>
           <Footer />

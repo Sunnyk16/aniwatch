@@ -1,0 +1,14 @@
+@media only screen and (max-width: 375px) {
+    .marquee {
+      width: 100%; /* Adjust width to fit smaller screens */
+      overflow-x: auto; /* Enable horizontal scrolling on small screens */
+      white-space: nowrap; /* Ensure all items stay in one line */
+    }
+  }
+  
+  /* Ensure images inside the marquee are responsive */
+  .marquee img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  

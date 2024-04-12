@@ -34,32 +34,29 @@ function Movie() {
     <div>
       {/* <Navabar /> */}
       <div className="main row ">
-        <div className=" col-md-4 col-sm-6  p-3">
-          <div className="text-capitalize fw-bolder text-center  ">
+        <div className="col-md-4 col-sm-6 p-3">
+          <div className="text-capitalize fw-bolder text-center">
             <h1>{title} </h1>
           </div>
-          <div className="image-container">
-            <img src={imgUrl} />
+          <div className="image-container img">
+            <img src={imgUrl} className="" alt="Movie Poster" />
           </div>
         </div>
-        <div className="col-md-8 col-sm-6 " >
+        <div className="col-md-8 col-sm-6">
           <div className="row">
-          <div className="box  col-md-1  gap-sm-2  ">
-            <div className="">
+            <div className="box col-12 col-sm-3 gap-sm-2">
               <div className="card" style={{ backgroundColor: "#2C2B31" }}>
-                <div className="button-group mx-auto mt-3 ">
-                  <button>Thriller/Mystery</button>
+                <div className="button-group mx-auto mt-3 fs-4">
+                  <button className="">Thriller/Mystery</button>
                   <button>Action</button>
                   <button>Advanture</button>
                   <button>Fantasy</button>
                 </div>
-
                 <div className="mx-auto">
                   <div className="button-link">
                     <span>
                       <img
                         src="https://s.yimg.com/fz/api/res/1.2/XB0O5I9RmAFryIG9tHZTmA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MzMy/https://s.yimg.com/zb/imgv1/71e55e11-6a5f-3d09-ac34-5d62f0d53562/t_500x300"
-                        // src={img}
                         alt=""
                       />
                       76/10
@@ -71,7 +68,6 @@ function Movie() {
                       />
                       13(18+)
                     </span>
-
                     <span>
                       <img src={imgUrl} alt="" />
                       3h 12m
@@ -81,13 +77,11 @@ function Movie() {
                 <div className="mx-4">
                   <p>{content}</p>
                 </div>
-
                 <div className="d-flex align-items-start ms-4 ">
                   <a href="" className="text-decoration-none ">
                     READ MORE
                   </a>
                 </div>
-
                 <div className="group">
                   <div>
                     <button>WATCH TRAILER</button>
@@ -99,37 +93,33 @@ function Movie() {
                       alt=""
                     />
                   </div>
-
                   <div>
                     <button>TO WATCHLIST +</button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className=" col  my-1 mx-sm-auto">
-            <div className="w-100">
-              <div>
-                <h4>Director</h4>
-                <p>James Cameron</p>
-              </div>
-              <div>
-                <h4>Writers</h4>
-                <p>Rick Jaffa + Rick Jaffa</p>
-                <p>Amanda Sliver</p>
-              </div>
-              <div>
-                <h4>Stars</h4>
-                <p>Zoe Saldana * Rick Jaffa </p>
-                <p>Sigourney weaver</p>
+            <div className="col my-1 mx-sm-auto">
+              <div className="w-100">
+                <div>
+                  <h4>Director</h4>
+                  <p>James Cameron</p>
+                </div>
+                <div>
+                  <h4>Writers</h4>
+                  <p>Rick Jaffa + Rick Jaffa</p>
+                  <p>Amanda Sliver</p>
+                </div>
+                <div>
+                  <h4>Stars</h4>
+                  <p>Zoe Saldana * Rick Jaffa</p>
+                  <p>Sigourney weaver</p>
+                </div>
               </div>
             </div>
           </div>
-          </div>
-          
         </div>
       </div>
-
       <Footer />
     </div>
   );
