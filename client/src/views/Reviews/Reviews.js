@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import "./Reviews.css"
 import ReviewCard from '../../components/ReviewCard/ReviewCard';
+import Navabar from "../../components/Navabar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 function Reviews() {
     const [reviews, setReviews] = useState([]);
@@ -18,7 +20,9 @@ function Reviews() {
         loadReviews();
     }, [])
   return (
-    <div>
+    <div className='megha'>
+      <Navabar/>
+      <div className='review-page'>
       <h1 className='header'>Our Review</h1>
       <div className='review-cards-container'>
       
@@ -36,7 +40,9 @@ function Reviews() {
         })
         
       }
+      </div>
     </div>
+    <Footer/>
     </div>
     
   )

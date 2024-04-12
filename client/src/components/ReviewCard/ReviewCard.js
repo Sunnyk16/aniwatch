@@ -9,7 +9,7 @@ function ReviewCard({_id, name, e_mail, experience, suggestion}) {
         <h2>{name}</h2>
         <h3>{e_mail}</h3>
         <span className='abc'>{experience}</span>
-        <p>{suggestion}</p>
+        <p className='naina'>{suggestion}</p>
       </div>
 
     </div>
