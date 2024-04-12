@@ -36,13 +36,13 @@ function Navbar() {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to={`/search`} className="text-decoration-none ">
                 <a className="nav-link text-white text-capitalize" href="#">
                   Categories
                 </a>
-                </Link>
-              </li>
+                </Link> */}
+              {/* </li>  */}
               <li className="nav-item">
               <Link to={`/dashboard`} className="text-decoration-none ">
                 <a className="nav-link text-white text-capitalize" href="#">
@@ -58,12 +58,21 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
+              <Link to={`/feedback`} className="text-decoration-none ">
+                <a className="nav-link text-white text-capitalize" href="#">
+                  feedback
+                </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                
               <Link to={`/aboutus`} className="text-decoration-none ">
                 <a className="nav-link text-white text-capitalize" href="#">
                   about
                 </a>
                 </Link>
               </li>
+              
               {/* dropdown */}
               {/* <li className="nav-item dropdown">
                 <a
