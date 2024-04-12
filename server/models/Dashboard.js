@@ -2,9 +2,9 @@ import {model, Schema} from 'mongoose';
 
 
 const dashboardSchema = new Schema({
-    totalhours : String,
-    totalmovies: String,
-    totaladded: String,
+    name : String,
+    genre : String,
+    duration : String,
     ratings: String
 })
 

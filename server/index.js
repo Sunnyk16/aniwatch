@@ -185,46 +185,65 @@ app.delete("/contacts/:id", async(req, res)=>{
 })
 
 // Dashboard API
+ 
 
+const movies = []; //use as a temporary database
 
-app.get("/totalhours",async (req,res)=>{
-  const{id} = req.params;
+app.post('/add-movie',(req, res)=>{
+  const{id, name, genre, duration}=req.body;
 
-  await Dashboard.onclick({_id: id})
+  if(!id){
+    return res.json({
+      success: false,
+      message:"Id is required",
+      data: null
+    })
+  } 
+  if(!name){
+    return res.json({
+      success: false,
+      message:"Name is required",
+      data: null
+    })
+  } 
+  if(!genre){
+    return res.json({
+      success: false,
+      message:"Genre is required",
+      data: null
+    })
+  } 
+  if(!duration){
+    return res.json({
+      success: false,
+      message:"Duration is required",
+      data: null
+    })
+  } 
+
+const newMovie={
+  "id":id,
+  "name":name,
+  "genre":genre,
+  "duration":duration
+}
+movies.push(newMovie);
+
+res.json({
+  success : true,
+  message :'movie added successfully',
+  data : newMovie
+})
+})
+
+app.get('/all-movies', (req,res)=>{
 
   res.json({
     success: true,
-    message: "added successfully",
+    message:'All Movies fetched successfully',
+    data : movies
   })
-  })
-
-  app.get("/totalmovies",async (req,res)=>{
-    const{id} = req.params;
-
-  await Dashboard.onclick({_id: id})
-
-    
-    res.json({
-      success: true,
-      message: "added successfully",
-    })
-    })
-
-    
-    app.get("/totaladded",async (req,res)=>{
-      const{id} = req.params;
-
-  await Dashboard.onclick({_id: id})
-
-      res.json({
-        success: true,
-        message: "added successfully",
-      })
-      })
-
-      
-
-
+})
 
 
 

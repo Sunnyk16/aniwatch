@@ -39,7 +39,7 @@ function Navbar() {
               <li className="nav-item">
                 <Link to={`/search`} className="text-decoration-none ">
                 <a className="nav-link text-white text-capitalize" href="#">
-                  categories
+                  Categories
                 </a>
                 </Link>
               </li>
