@@ -1,0 +1,13 @@
+.review-cards-container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+.review-cards{
+  /* display: flex;  */
+   justify-content: center; 
+  
+}
+.header{
+   color: black;
+}

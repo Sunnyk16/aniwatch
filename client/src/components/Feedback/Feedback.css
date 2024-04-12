@@ -6,14 +6,14 @@
     justify-content:center;
     height:100vh;
 }
-.header{
+.feed-header{
     text-align: center;
     color: white;
     margin-top: 30px;
     margin-left: 40px;
 }
 .feedback-form{ 
-    width: 700px;
+    width: 600px;
     border: 4px solid white; 
     justify-content: center;
     display: block;
@@ -36,20 +36,21 @@
     padding: 10px;
     margin-top: 10px;
     border-radius: 7px;
+    color: black;
 }
-/* .customer-email-info{
-     margin-top: 10px; 
-} */
+.customer-email-info{
+    margin-top: 10px;
+}
 .customer-email{
     color: white;
     font-size: 20px;
-    margin-top: 10px;
 }
 .customer-email-input{
     width: 400px;
     padding: 10px;
     margin-top: 10px; 
     border-radius: 7px;
+    color: black;
 }
 .customer-rating{
     display: flex;
@@ -73,6 +74,15 @@
     color: white;
     font-size: 20px;
 }
+.input-experience{
+    width: 400px;
+    padding: 10px;
+    margin-top: 10px; 
+    border-radius: 7px;
+    display: block;
+    margin: 0 auto;
+    color: black;
+}
 .experience-rating{
     display: flex;
     justify-content: center;
@@ -95,30 +105,30 @@
     justify-content: center;
 }
 .tittle{
-    margin-top: 20px;
     text-align: center;
     color: white;
+    margin-top: 10px;
 }
 .suggestion-input{
-    margin-top: 20px;
     width: 400px;
     height: 100px;
     align-items: center;
     display: block;
     margin: 0 auto;
     border-radius: 5px;
+    color: black;
 }
 .Feedback-btn{
     display: block;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 30px;
     border-radius: 10px;
     cursor: pointer;
 }
 
-@media screen and (min-width:860px){
-    customer-email-info{
-        margin-top: 20px;
+@media screen and (max-width:600px) {
+    .feedback-form{
+        width: 400px;
     }
 }
