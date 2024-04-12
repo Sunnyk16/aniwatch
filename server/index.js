@@ -184,79 +184,42 @@ app.delete("/contacts/:id", async(req, res)=>{
   })
 })
 
-// Dashboard API
- 
 
-const movies = []; //use as a temporary database
+app.post('/dashboard', async (req, res) => {
+  const { name, genre, duration, ratings } = req.body;
 
-app.post('/add-movie',(req, res)=>{
-  const{id, name, genre, duration}=req.body;
-
-  if(!id){
-    return res.json({
+  try {
+    const newDashboardEntry = await Dashboard.create({ name, genre, duration, ratings });
+    res.json({
+      success: true,
+      message: 'Dashboard entry created successfully',
+      data: newDashboardEntry
+    });
+  } catch (error) {
+    res.status(500).json({
       success: false,
-      message:"Id is required",
-      data: null
-    })
-  } 
-  if(!name){
-    return res.json({
+      message: 'An error occurred while creating dashboard entry',
+      error: error.message
+    });
+  }
+});
+
+app.get('/dashboard', async (req, res) => {
+  try {
+    const dashboardEntries = await Dashboard.find();
+    res.json({
+      success: true,
+      message: 'Dashboard entries fetched successfully',
+      data: dashboardEntries
+    });
+  } catch (error) {
+    res.status(500).json({
       success: false,
-      message:"Name is required",
-      data: null
-    })
-  } 
-  if(!genre){
-    return res.json({
-      success: false,
-      message:"Genre is required",
-      data: null
-    })
-  } 
-  if(!duration){
-    return res.json({
-      success: false,
-      message:"Duration is required",
-      data: null
-    })
-  } 
-
-const newMovie={
-  "id":id,
-  "name":name,
-  "genre":genre,
-  "duration":duration
-}
-movies.push(newMovie);
-
-res.json({
-  success : true,
-  message :'movie added successfully',
-  data : newMovie
-})
-})
-
-app.get('/all-movies', (req,res)=>{
-
-  res.json({
-    success: true,
-    message:'All Movies fetched successfully',
-    data : movies
-  })
-})
-
-
-
- 
-//database connection
-// const connectDb = async () => {
-//   await mongoose.connect(
-//     process.env.DB_URI
-//   ).then(data=>console.log("connected")).catch(err=>console.log(err));
-// };
-// connectDb();
-
-// review api start here
+      message: 'An error occurred while fetching dashboard entries',
+      error: error.message
+    });
+  }
+});
 
 app.post("/reviews", async(req, res)=>{
   const {name, e_mail, experience, suggestion} = req.body;

@@ -3,8 +3,13 @@
     background-color: white;
     padding: 10px;
     border-radius: 10px;
-    position: relative;
+    /* position: relative; */
 
+}
+body{
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
 }
 .movie-title{
     font-size: 20px;
@@ -13,7 +18,7 @@
 }
 .genre{
     font-size: 14px;
-    position: absolute;
+    /* position: absolute; */
     top: 10px;
     right: 10px;
 
