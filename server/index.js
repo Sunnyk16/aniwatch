@@ -189,7 +189,7 @@ app.delete("/contacts/:id", async(req, res)=>{
 const movies = []; //use as a temporary database
 
 app.post('/add-movie',(req, res)=>{
-  const{id, name, genre}=req.body;
+  const{id, name, genre, duration}=req.body;
 
   if(!id){
     return res.json({
@@ -212,11 +212,19 @@ app.post('/add-movie',(req, res)=>{
       data: null
     })
   } 
+  if(!duration){
+    return res.json({
+      success: false,
+      message:"Duration is required",
+      data: null
+    })
+  } 
 
 const newMovie={
   "id":id,
   "name":name,
-  "genre":genre
+  "genre":genre,
+  "duration":duration
 }
 movies.push(newMovie);
 
