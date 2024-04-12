@@ -6,9 +6,9 @@ import {FaCartArrowDown, FaUserAlt, FaSafari, FaTasks, FaCar} from 'react-icons/
 function App(){
     const[movies,setMovies]=useState([])
 
-    const loadMovies= ()=>{
-        const response= axios.get('http://localhoast:5000/all-movies')
-        console.log(response);
+    const loadMovies= async()=>{
+        const response= await axios.get('http://localhoast:5000/all-movies')
+        console.log(response.data);
     }
     useEffect(()=>{
         loadMovies();
@@ -72,7 +72,7 @@ function Dashboard() {
                 <h2>MOVIES</h2>
                 <button className="btn btn-success">+ Add More</button>
             </div>
-            <table class="table w-100">
+            <table className="table w-100">
                 <thead>
                     <tr>
                         <th scope="col">Sr No.</th>
@@ -88,56 +88,56 @@ function Dashboard() {
                         <td>Tarzan The wonder car</td>
                         <td>3 Hr</td>
                         <td>Thrill</td>
-                        <td><button class="btn btn-success mx-2">+</button>
-                        <button class="btn btn-danger mx-2">-</button> </td>
+                        <td><button className="btn btn-success mx-2">+</button>
+                        <button className="btn btn-danger mx-2">-</button> </td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Tamasha</td>
                         <td>2 Hr</td>
                         <td>Romance</td>
-                        <td><button class="btn btn-success mx-2">+</button>
-                        <button class="btn btn-danger mx-2">-</button> </td>
+                        <td><button className="btn btn-success mx-2">+</button>
+                        <button className="btn btn-danger mx-2">-</button> </td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Krish 3</td>
                         <td>2.5 Hr</td>
                         <td>Action</td>
-                        <td><button class="btn btn-success mx-2">+</button>
-                        <button class="btn btn-danger mx-2">-</button> </td>
+                        <td><button className="btn btn-success mx-2">+</button>
+                        <button className="btn btn-danger mx-2">-</button> </td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Animal</td>
                         <td>3 Hr</td>
                         <td>Action, Romance</td>
-                        <td><button class="btn btn-success mx-2">+</button>
-                        <button class="btn btn-danger mx-2">-</button> </td>
+                        <td><button className="btn btn-success mx-2">+</button>
+                        <button className="btn btn-danger mx-2">-</button> </td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Anand</td>
                         <td>3 Hr</td>
                         <td>Drama</td>
-                        <td><button class="btn btn-success mx-2">+</button>
-                        <button class="btn btn-danger mx-2">-</button> </td>
+                        <td><button className="btn btn-success mx-2">+</button>
+                        <button className="btn btn-danger mx-2">-</button> </td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Thor Love and Thunder</td>
                         <td>2 Hr</td>
                         <td>Action</td>
-                        <td><button class="btn btn-success mx-2">+</button>
-                        <button class="btn btn-danger mx-2">-</button> </td>
+                        <td><button className="btn btn-success mx-2">+</button>
+                        <button className="btn btn-danger mx-2">-</button> </td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>Golmaal</td>
                         <td>2.5 Hr</td>
                         <td>Comedy</td>
-                        <td><button class="btn btn-success mx-2">+</button>
-                        <button class="btn btn-danger mx-2">-</button> </td>
+                        <td><button className="btn btn-success mx-2">+</button>
+                        <button className="btn btn-danger mx-2">-</button> </td>
                     </tr>
                 </tbody>
             </table>
