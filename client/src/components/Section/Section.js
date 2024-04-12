@@ -9,7 +9,7 @@ function Section({ genre }) {
   const loadMovies = async () => {
     try {
       const response = await axios.get(`${process.env.REACT_APP_API_URL}/moviedata`);
-      const filteredMovies = response.data.data.filter(movie => movie.gener === genre);
+      const filteredMovies = response.data.data.filter(movie => movie.genre === genre);
       setMovies(filteredMovies);
       console.log(`${genre} movies:`, filteredMovies);
     } catch (error) {

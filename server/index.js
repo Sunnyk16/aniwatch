@@ -4,7 +4,7 @@ import  mongoose  from "mongoose";
 import UserModel from "./models/User.js";
 import MovieModel from "./models/MoviesData.js";
 import Contact from "./models/Contact.js";
-import Review from "./models/review.js";
+import Dashboard from "./models/Dashboard.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -60,9 +60,9 @@ app.post("/login", (req, res) => {
 });
 
 app.post(`/moviedata`, async (req, res) => {
-  const { img, title, content, gener } = req.body;
+  const { img, title, content, genre } = req.body;
 
-  if (!title || !content || !img || !gener) {
+  if (!title || !content || !img || !genre) {
     return res.json({
       Success: false,
       message: "fields are required",
@@ -74,7 +74,7 @@ app.post(`/moviedata`, async (req, res) => {
     img: img,
     title: title,
     content: content,
-    gener: gener,
+    genre: genre,
   });
 
   res.json({
@@ -92,6 +92,21 @@ app.get("/moviedata",async (req,res)=>{
     data: movie,
     })
 })
+
+app.get("/moviedata/:id", async (req, res) => {
+  const { id } = req.params;
+
+  const note = await MovieModel.findOne({
+    _id: id,
+  });
+
+  res.json({
+    success: true,
+    message: "data fetched successfully",
+    data: note,
+  });
+});
+
 
 // Contact form api
 
@@ -167,6 +182,50 @@ app.delete("/contacts/:id", async(req, res)=>{
       data: null
   })
 })
+
+// Dashboard API
+
+
+app.get("/totalhours",async (req,res)=>{
+  const{id} = req.params;
+
+  await Dashboard.onclick({_id: id})
+
+  res.json({
+    success: true,
+    message: "added successfully",
+  })
+  })
+
+  app.get("/totalmovies",async (req,res)=>{
+    const{id} = req.params;
+
+  await Dashboard.onclick({_id: id})
+
+    
+    res.json({
+      success: true,
+      message: "added successfully",
+    })
+    })
+
+    
+    app.get("/totaladded",async (req,res)=>{
+      const{id} = req.params;
+
+  await Dashboard.onclick({_id: id})
+
+      res.json({
+        success: true,
+        message: "added successfully",
+      })
+      })
+
+      
+
+
+
+
 
  
 //database connection

@@ -1,76 +1,203 @@
-/* .bg-image{
-    background-image: url(img-bg.avif);
+/* .bg-image {
+  background-image: url(img-bg.avif);
+}
+ .body {
+  background-color: blue;
+}
 
+.signup-container {
+  background-image: url(bg-img.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.signup-form-container {
+  margin-left: 50%;
+  margin-top: 10%;
+  border: 5px solid white;
+  height: 600px;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.input {
+  background-color: white;
+  padding: 10px;
+  width: 330px;
+  border-radius: 7px;
+}
+
+.text {
+  color: white;
+  padding: 7px;
+}
+
+.heading {
+  color: white;
+  text-align: center;
+}
+
+.background {
+  background-image: url(img-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  background-image: url("img-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.text {
+  color: #fff;
+}
+
+.text-primary {
+  color: #007bff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%;
+  }
 } */
-.body{
-    background-color: blue;
-}
 
-/* container col-xl-10 col-xxl-8 px-4 py-5 */
-
-
-.signup-container{
-    background-image: url(bg-img.avif);
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: flex;
-    justify-content:center;
-    height:100vh;
-}
-
-.signup-form-container{
-    margin-left: 50%;
-    margin-top: 10%;
-    border: 5px solid white;
-    height: 600px;
-    padding: 50px;
-    border-radius: 10px;
-
-
-}
-
-.input{
-    background-color:white;
-    padding: 10px;
-    width:330px;
-    border-radius: 7px;
-    
-}
-
-
-    
-.text{
-    color: white;
-    padding: 7px;
-}
-
-.heading{
-    color: white;
-    text-align: center;
-}
-
-
-.background{
-    background-image: url(img-2.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    
-
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Background color for the body */
+  }
   
-}
-
-
-/* d-flex 
-justify-content-center
- align-items
-  bg-secondary vh-100 */
-
-  /* 
-  bg-white p-3 rounded w-25 */
-
-  /* form-control rounded-0 */
-
-  /* btn 
-  btn-default
-   border
-    w-100 bg-light rounded-0 text-decoration-none */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adding a 3D effect with increased shadow */
+    transform: translateZ(20px); /* Adding a 3D transform */
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .text {
+    color: #fff;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  

@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg bg-dark  "
+        className="navbar navbar-expand-lg  "
         aria-label="Eleventh navbar example"
       >
         
@@ -22,7 +22,7 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon text-white "></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarsExample09">
@@ -31,7 +31,7 @@ function Navbar() {
                 <a
                   className="nav-link active text-white"
                   aria-current="page"
-                  href="#"
+                  href="/"
                 >
                   Home
                 </a>
@@ -51,11 +51,18 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                {/* <Link to={`/login`} className="text-decoration-none">
+              <Link to={`/contact`} className="text-decoration-none ">
                 <a className="nav-link text-white text-capitalize" href="#">
-                  sign in
+                  contact
                 </a>
-                </Link> */}
+                </Link>
+              </li>
+              <li className="nav-item">
+              <Link to={`/aboutus`} className="text-decoration-none ">
+                <a className="nav-link text-white text-capitalize" href="#">
+                  about
+                </a>
+                </Link>
               </li>
               {/* dropdown */}
               {/* <li className="nav-item dropdown">

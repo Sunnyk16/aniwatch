@@ -4,6 +4,7 @@ import "./Contact.css"
 import Navbar from '../../components/Navabar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import toast from 'react-hot-toast'
+import ContactImg from './Contact-img.webp'
 
 
 function Contact() {
@@ -14,7 +15,7 @@ function Contact() {
   const [message, setMessage] = useState('');
 
   const addContact = async() => {
-    const response = await axios.post(`${process.env.REACT_APP_API_URL2}/contacts`, 
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/contacts`, 
     // const response = await axios.post(`http://localhost:5000/contacts`, 
 
     {
@@ -43,11 +44,18 @@ function Contact() {
 
       <Navbar/>
 
-      <div className='bg-secondary py-5'>
+      <div className='header-container d-flex justify-content-evenly'>
+          <div>
+            <p className='main-heading text-black'>How can we help you?</p>
+            <h1 className='heading-22 text-center'>Contact US</h1>
+            <h6 className='heading-title '>We’re here to help and answer any questions you<br />might have. We look forward to hearing from you!</h6>
+          </div>
+          <img src={ContactImg} alt='' className='contact-img'/>
+        </div>
 
-        <h1 className='fw-bold text-center py-4 text-white heading'>Contact US</h1>
+      <div className='bg-black py-5'>
 
-        <div className='card bg-dark'>
+        <div className='card bg-dark mx-auto '>
 
           <form className="row g-3 p-5">
 
