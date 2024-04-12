@@ -1,3 +1,9 @@
+.megha{
+   background-color: rgb(30, 30, 53);
+}
+.review-page{
+   background-color: silver;
+}
 .review-cards-container{
    display: flex;
    flex-wrap: wrap;
@@ -9,5 +15,7 @@
   
 }
 .header{
-   color: black;
+   color:whitesmoke;
+   text-align: center;
+   margin-top: 20px;
 }

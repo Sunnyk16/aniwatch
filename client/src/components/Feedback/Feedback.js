@@ -5,6 +5,8 @@ import yellowImg from "./yellow-star.png";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Reviews from '../../views/Reviews/Reviews';
+import Navabar from "../../components/Navabar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 
 function Feedback() {
@@ -29,7 +31,11 @@ function Feedback() {
 
 
   return (
+
+    <div className='feedback-page'>
+      <Navabar/>
     <div className='feedback-container'>
+      
       <h1 className='feed-header'>Share Your Feedback</h1>
      
       <form className='feedback-form'>
@@ -96,7 +102,11 @@ function Feedback() {
 
           <button type='botton' className='Feedback-btn' onClick={addReview}>Send</button>   
       </form>
+
       
+      
+    </div>
+      <Footer/>
     </div>
 
   )
