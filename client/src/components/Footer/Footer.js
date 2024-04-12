@@ -11,7 +11,7 @@ function Footer() {
             <h6 className="text-uppercase fs-2 fw-bold mb-4 text-blue">
               Aniwatch
             </h6>
-            <p>
+            <p className="text-light">
               Welcome to AniWatch, your premier destination for all things
               animated on the big screen!
             </p>
@@ -72,7 +72,7 @@ function Footer() {
           </div>
           <div className="col-md-3">
             <h6 className="text-uppercase fw-bold mb-4 text-blue">Contact</h6>
-            <p>
+            <p className="text-white">
               <i className="fas fa-home me-3"></i>Maharashtra
             </p>
             <p>

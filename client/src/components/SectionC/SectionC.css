@@ -11,4 +11,22 @@
     max-width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
   }
+  .c{
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+  }
+  .c:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+  @media only screen and (max-width: 375px) {
+    .c{
+      transform: scale(1);
+      transition: 0.3s ease-in-out;
+    }
+    .c:hover{
+      transform: scale(0.9);
+      transition: 0.1s ease-in-out;
+    }
+  }
   

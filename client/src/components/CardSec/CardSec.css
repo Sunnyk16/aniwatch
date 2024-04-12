@@ -15,7 +15,7 @@
   .card-img-top {
     height: 250px;
     width: auto; /* Set image height */
-    object-fit: cover; /* Ensure image covers the entire space */
+    object-fit: fill; /* Ensure image covers the entire space */
   }
   
   .card-body {
