@@ -215,7 +215,7 @@ function Aboutus() {
               </div>
             </div>
 
-            <div className="col-md-3 mb-4">
+            {/* <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100">
                 <img src={Img1} className="card-img-top p-4" alt="Flora Nyra" />
                 <div className="card-body">
@@ -269,9 +269,9 @@ function Aboutus() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-md-3 mb-4">
+            {/* <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100">
                 <img src={Img1} className="card-img-top p-4" alt="Flora Nyra" />
                 <div className="card-body">
@@ -297,7 +297,9 @@ function Aboutus() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+
           </div>
         </div>
       </div>
