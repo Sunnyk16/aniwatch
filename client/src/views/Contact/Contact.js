@@ -41,13 +41,14 @@ function Contact() {
 
   return (
     <>
-
-      <Navbar/>
+      <div className='bg-dark'>
+       <Navbar/>
+      </div>
 
       <div className='header-container d-flex justify-content-evenly'>
           <div>
-            <p className='main-heading text-black'>How can we help you?</p>
-            <h1 className='heading-22 text-center'>Contact US</h1>
+            <p className='main-heading text-center text-white'>How can we help you?</p>
+            <h1 className='contactus-heading text-center text-black'>Contact US</h1>
             <h6 className='heading-title '>We’re here to help and answer any questions you<br />might have. We look forward to hearing from you!</h6>
           </div>
           <img src={ContactImg} alt='' className='contact-img'/>

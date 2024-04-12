@@ -20,7 +20,7 @@ function ContactsView() {
 
   return (
     <div>
-        <h1 className='text-center'>Contacts Form</h1>
+        <h1 className='text-center text-black'>Contacts Form</h1>
 
         {
           contacts.map((contact, index) => {

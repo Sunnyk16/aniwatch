@@ -16,14 +16,14 @@ function ContactCard({ _id, firstName, lastName, email, address, message, loadCo
 
 
   return (
-      <div class="container border border-primary rounded m-4 p-4 bg-primary-subtle position-relative">
-          <h1 className='m-2'>Name: {firstName} {lastName}</h1>
+      <div class="container border border-primary rounded mt-4 p-4 bg-primary-subtle position-relative">
+          <h1 className='m-2 text-black'>Name: {firstName} {lastName}</h1>
 
-          <h4 className='m-2'>Email: {email}</h4>
+          <h4 className='m-2 text-black'>Email: {email}</h4>
 
-          <h5 className='m-2'>Address: {address}</h5>
+          <h5 className='m-2 text-black'>Address: {address}</h5>
 
-          <p className='m-2 fs-4'>Message: {message}</p>
+          <p className='m-2 fs-4 text-black'>Message: {message}</p>
 
           <img src={DeleteIcon} alt='DeleteIcon' className='delete-icon position-absolute bottom-0 end-0 m-2'
               onClick={deleteContact} />
