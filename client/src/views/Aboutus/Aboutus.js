@@ -4,29 +4,34 @@ import Img1 from "./img-1.jpg";
 import background from "./img12.jpeg";
 import "./Aboutus.css";
 import Footer from "../../components/Footer/Footer";
-import GitHub from './github.png'
-import Gmail from './gmail.png'
-import TeamRakesh from './img13.jpeg'
-import TeamShreya from './img15.jpeg'
-import TeamSunny from './img16.jpg'
-import TeamSanket from './img14.jpeg'
-import TeamSuchita from './img17.jpeg'
-
-
+import GitHub from "./github.png";
+import Gmail from "./gmail.png";
+import TeamRakesh from "./img13.jpeg";
+import TeamShreya from "./img15.jpeg";
+import TeamSunny from "./img16.jpg";
+import TeamSanket from "./img14.jpeg";
+import TeamSuchita from "./img17.jpeg";
 
 function Aboutus() {
   return (
     <div className="bg-dark">
       <Navbar />
       <div className="container ">
-        <div className="row  w-100 card1"style={{backgroundImage: `url(${background})`}}>
+        <div
+          className="row  w-100 card1"
+          style={{ backgroundImage: `url(${background})` }}
+        >
           <div className=" col ">
-            <h1 className=" fw-bold fs-f  text-primary mb-3 text-center m-5">About Us</h1>
+            <h1 className=" fw-bold fs-f  text-primary mb-3 text-center m-5">
+              About Us
+            </h1>
             <p className="  fw-bold  text-light  fs-t">
-            At our core, we're dedicated to bridging the gap between imagination and reality, crafting immersive narratives that transport audiences into captivating worlds of film and storytelling.
+              At our core, we're dedicated to bridging the gap between
+              imagination and reality, crafting immersive narratives that
+              transport audiences into captivating worlds of film and
+              storytelling.
             </p>
           </div>
-          
         </div>
         <div className="our-mission mb-5">
           <h1 className="heading">Our Mission</h1>
@@ -57,103 +62,96 @@ function Aboutus() {
             </div>
           </div>
 
-
-
-
-
-
-
-
           <div className="row align-items-center g-lg-5 py-5">
             <div className="col-md-3 mb-4">
-              <div className="card border-0 shadow w-100">
-                <img
-                  src={TeamSunny} 
-                  className="Team-img "
-                  alt="TeamSunny"
-                />
+              <div className="card border-0 shadow w-100 ">
+                <img src={TeamSunny} className="Team-img  rounded-sm  " alt="TeamSunny" />
                 <div className="card-body">
-                  <h5 className="card-title text-primary">Sunny Kumar</h5><br></br>
-                  <div>
-                    <img src={Gmail} className="github"></img>
-                     <a href="mailto:Kumarsunny1246@gmail.com" className=" text-decoration-none text-dark " >
-                      Kumarsunny1246@gmail.com
-                     </a><br></br><br></br>
-
-                     <img src={GitHub} className="github"></img>
-                     <a href="https://github.com/Sunnyk16" className=" text-decoration-none text-dark " >
-                     https://github.com/Sunnyk16
-                     </a>
+                  <h5 className="card-title text-primary fw-bold fs-3 text-center mb-4 ">
+                    Sunny Kumar
+                  </h5>
                   
+                  <div className="my-2">
+                    <img src={Gmail} className="github "></img>
+                    <a
+                      href="mailto:Kumarsunny1246@gmail.com"
+                      className=" text-decoration-none text-dark "
+                    >
+                      Kumarsunny1246@gmail.com
+                    </a>
+                    <br/><br/>  
+
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href="https://github.com/Sunnyk16"
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com/Sunnyk16
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-
-
-
-
 
             {/* Add more team members similarly */}
             <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100 h-100">
-                <img
-                  src={TeamSanket}
-                  className="Team-img"
-                  alt="TeamSanket"
-                />
+                <img src={TeamSanket} className="Team-img" alt="TeamSanket" />
                 <div className="card-body">
-                  <h5 className="card-title text-primary">Sanket Bhure</h5><br></br>
+                  <h5 className="card-title text-primary fw-bold fs-3 text-center">Sanket Bhure</h5>
+                  <br></br>
 
                   <div>
                     <img src={Gmail} className="github"></img>
-                     <a href="mailto:sanketbhure1306@gmail.com " className=" text-decoration-none text-dark " >
-                     sanketbhure1306@gmail.com 
-                     </a><br></br><br></br>
+                    <a
+                      href="mailto:sanketbhure1306@gmail.com "
+                      className=" text-decoration-none text-dark "
+                    >
+                      sanketbhure1306@gmail.com
+                    </a>
+                    <br></br>
+                    <br></br>
 
-                     <img src={GitHub} className="github"></img>
-                     <a href="https://github.com/sanketbhure" className=" text-decoration-none text-dark " >
-                     https://github.com/sanketbhure
-                     </a>
-                  
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href="https://github.com/sanketbhure"
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com/sanketbhure
+                    </a>
                   </div>
-                  
                 </div>
               </div>
             </div>
-
-
-
-
 
             <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100">
-                <img
-                  src={TeamShreya}
-                  className="Team-img "
-                  alt="TeamShreya"
-                />
+                <img src={TeamShreya} className="Team-img " alt="TeamShreya" />
                 <div className="card-body">
-                  <h5 className="card-title text-primary">Shreya Kar</h5><br></br>
+                  <h5 className="card-title text-primary fw-bold fs-3 text-center">Shreya Kar</h5>
+                  <br></br>
                   <div>
                     <img src={Gmail} className="github"></img>
-                     <a href="shreyakar444@gmail.com" className=" text-decoration-none text-dark " >
-                     shreyakar444@gmail.com
-                     </a><br></br><br></br>
+                    <a
+                      href="shreyakar444@gmail.com"
+                      className=" text-decoration-none text-dark "
+                    >
+                      shreyakar444@gmail.com
+                    </a>
+                    <br></br>
+                    <br></br>
 
-                     <img src={GitHub} className="github"></img>
-                     <a href=" https://github.com/shreyaa-kar" className=" text-decoration-none text-dark " >
-                     https://github.com/shreyaa-kar
-                     </a>
-                  
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href=" https://github.com/shreyaa-kar"
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com/shreyaa-kar
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-
-
-
-
 
             <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100">
@@ -163,137 +161,143 @@ function Aboutus() {
                   alt="TeamSuchita"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-primary">Suchita Thorat</h5><br></br>
+                  <h5 className="card-title text-primary fw-bold fs-3 text-center">Suchita Thorat</h5>
+                  <br></br>
                   <div>
                     <img src={Gmail} className="github"></img>
-                     <a href="mailto:suchitathorat73@gmail.com" className=" text-decoration-none text-dark " >
-                     suchitathorat73@gmail.com
-                     </a><br></br><br></br>
+                    <a
+                      href="mailto:suchitathorat73@gmail.com"
+                      className=" text-decoration-none text-dark "
+                    >
+                      suchitathorat73@gmail.com
+                    </a>
+                    <br></br>
+                    <br></br>
 
-                     <img src={GitHub} className="github"></img>
-                     <a href="https://github.com/Suchitathorat" className=" text-decoration-none text-dark " >
-                     https://github.com/Suchitathorat
-                     </a>
-                  
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href="https://github.com/Suchitathorat"
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com/Suchitathorat
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-
-
-
-
             <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100">
-                <img
-                  src={TeamRakesh}
-                  className="Team-img"
-                  alt="TeamRakesh"
-                />
+                <img src={TeamRakesh} className="Team-img" alt="TeamRakesh" />
                 <div className="card-body">
-                  <h5 className="card-title text-primary">Rakesh Hatzade</h5><br></br>
+                  <h5 className="card-title text-primary fw-bold fs-3 text-center">Rakesh Hatzade</h5>
+                  <br></br>
                   <div>
                     <img src={Gmail} className="github"></img>
-                     <a href="mailto:hatzaderakesh1@gmail.com" className=" text-decoration-none text-dark " >
-                     hatzaderakesh1@gmail.com
-                     </a><br></br><br></br>
+                    <a
+                      href="mailto:hatzaderakesh1@gmail.com"
+                      className=" text-decoration-none text-dark "
+                    >
+                      hatzaderakesh1@gmail.com
+                    </a>
+                    <br></br>
+                    <br></br>
 
-                     <img src={GitHub} className="github"></img>
-                     <a href="https://github.com/rakeshhatzade11" className=" text-decoration-none text-dark " >
-                     https://github.com/rakeshhatzade11
-                     </a>
-                  
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href="https://github.com/rakeshhatzade11"
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com/rakeshhatzade11
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-
-
-
             <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100">
-                <img
-                  src={Img1}
-                  className="card-img-top p-4"
-                  alt="Flora Nyra"
-                />
-                <div className="card-body">
-                  <h5 className="card-title text-primary">Flora Nyra</h5>
-                  <div>
-                    <img src={Gmail} className="github"></img>
-                     <a href="mailto:123@gmail.com" className=" text-decoration-none text-dark " >
-                     123@gmail.com
-                     </a><br></br><br></br>
-
-                     <img src={GitHub} className="github"></img>
-                     <a href="  https://github.com " className=" text-decoration-none text-dark " >
-                     https://github.com
-                     </a>
-                  
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-
-
-
-
-            <div className="col-md-3 mb-4">
-              <div className="card border-0 shadow w-100">
-                <img
-                  src={Img1}
-                  className="card-img-top p-4"
-                  alt="Flora Nyra"
-                />
+                <img src={Img1} className="card-img-top p-4" alt="Flora Nyra" />
                 <div className="card-body">
                   <h5 className="card-title text-primary">Flora Nyra</h5>
                   <div>
                     <img src={Gmail} className="github"></img>
-                     <a href="mailto:123@gmail.com" className=" text-decoration-none text-dark " >
+                    <a
+                      href="mailto:123@gmail.com"
+                      className=" text-decoration-none text-dark "
+                    >
                       123@gmail.com
-                     </a><br></br><br></br>
+                    </a>
+                    <br></br>
+                    <br></br>
 
-                     <img src={GitHub} className="github"></img>
-                     <a href="https://github.com" className=" text-decoration-none text-dark " >
-                     https://github.com
-                     </a>
-                  
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href="  https://github.com "
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-
-
-
             <div className="col-md-3 mb-4">
               <div className="card border-0 shadow w-100">
-                <img
-                  src={Img1}
-                  className="card-img-top p-4"
-                  alt="Flora Nyra"
-                />
+                <img src={Img1} className="card-img-top p-4" alt="Flora Nyra" />
                 <div className="card-body">
                   <h5 className="card-title text-primary">Flora Nyra</h5>
                   <div>
                     <img src={Gmail} className="github"></img>
-                     <a href="mailto:123@gmail.com" className=" text-decoration-none text-dark " >
+                    <a
+                      href="mailto:123@gmail.com"
+                      className=" text-decoration-none text-dark "
+                    >
                       123@gmail.com
-                     </a><br></br><br></br>
+                    </a>
+                    <br></br>
+                    <br></br>
 
-                     <img src={GitHub} className="github"></img>
-                     <a href="https://github.com" className=" text-decoration-none text-dark " >
-                     https://github.com
-                     </a>
-                  
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href="https://github.com"
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            
+
+            <div className="col-md-3 mb-4">
+              <div className="card border-0 shadow w-100">
+                <img src={Img1} className="card-img-top p-4" alt="Flora Nyra" />
+                <div className="card-body">
+                  <h5 className="card-title text-primary">Flora Nyra</h5>
+                  <div>
+                    <img src={Gmail} className="github"></img>
+                    <a
+                      href="mailto:123@gmail.com"
+                      className=" text-decoration-none text-dark "
+                    >
+                      123@gmail.com
+                    </a>
+                    <br></br>
+                    <br></br>
+
+                    <img src={GitHub} className="github"></img>
+                    <a
+                      href="https://github.com"
+                      className=" text-decoration-none text-dark "
+                    >
+                      https://github.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
