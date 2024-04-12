@@ -1,6 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import "./Dashboard.css"
 import {FaCartArrowDown, FaUserAlt, FaSafari, FaTasks, FaCar} from 'react-icons/fa'
+
+function App(){
+    const[movies,setMovies]=useState([])
+
+    const loadMovies= ()=>{
+        const response= axios.get('http://localhoast:5000/all-movies')
+        console.log(response);
+    }
+    useEffect(()=>{
+        loadMovies();
+
+    }, [])
+}
 function Dashboard() {
   return (
     
