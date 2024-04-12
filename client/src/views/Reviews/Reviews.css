@@ -1,0 +1,8 @@
+.review-cards-container{
+   display: flex;
+}
+.review-cards{
+  /* display: flex;  */
+   justify-content: center; 
+  
+}

@@ -1,0 +1,16 @@
+/* .review-card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+.review-card{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    width: 350px;
+    padding: 5px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0;
+    justify-content: center;
+
+}

@@ -1,21 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "./Feedback.css";
 import imgStar from "./blank-star.png";
 import yellowImg from "./yellow-star.png";
+import axios from "axios";
+import toast from "react-hot-toast";
+import Reviews from '../../views/Reviews/Reviews';
+
 
 function Feedback() {
-    const [img, setImg] = useState('');
-  
-    const changeImg = ()=>{
-        setImg({yellowImg});
-    };
-  
-    useEffect(()=>{
-      changeImg();
-    },[img]);
+
+  const [name, setName] = useState('');
+  const [e_mail, setE_mail] = useState('');
+  const [experience, setExperience] = useState('');
+  const [suggestion, setSuggestion] = useState('');
+
+  const addReview = async()=> {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/reviews`,
+    {
+     name:name,
+     e_mail:e_mail,
+     experience:experience,
+     suggestion:suggestion
+    })
+    
+    toast.success(response.data.message);
+    window.location.href = "/review"
+  }
+
 
   return (
-       <div className='feedback-container'>
+    <div className='feedback-container'>
       <h1 className='header'>Share Your Feedback</h1>
      
       <form className='feedback-form'>
@@ -24,47 +38,47 @@ function Feedback() {
             
             <div className='customer-name-info'>
              <label for = "inputFullName" className='customer-name'>Customer Name</label> <br/>
-             <input type='text' id='inputFullName' required className='customer-name-input'/>
+             <input type='text' id='inputFullName' required className='customer-name-input'value={name}
+             onChange={(e)=>{
+              setName(e.target.value)
+             }}
+             />
             </div>
 
            <div className='customer-email-info'>
              <label for = "inputEMail" className='customer-email'>E-mail Address</label> <br/>
-              <input type='email' id='inputEmail' required className='customer-email-input'/>
+              <input type='email' id='inputEmail' required className='customer-email-input'
+              value={e_mail}
+              onChange={(e)=>{
+                setE_mail(e.target.value)
+              }}
+              />
            </div>
         </div>
         
 
-            
-        
-        {/* <p className='service'>Please rate the quality of the servive you received from your host</p> */}
-        {/* <div className='service-rating'>
-          <input type='checkbox' id='exellent'/>
-          <label for="exellent">Exellent</label> &nbsp;
-          <input type='checkbox' id='good'/>
-          <label for="good">Good</label> &nbsp;
-          <input type='checkbox' id='fair'/>
-          <label for="fair">Fair</label> &nbsp;
-          <input type='checkbox' id='bad'/>
-          <label for="bad">Bad</label> &nbsp;
-        </div> */}
 
        <p className='experinece'>Please rate your overall doing experience </p>
+
+       <select value={experience}
+       onChange={(e)=>{
+        setExperience(e.target.value)
+       }}
+       className='input-experience'
+       >
+        <option value="Experience">Experience</option>
+        <option value="Good">Good</option>
+        <option value="Bad">Bad</option>
+        <option value="normal">Normal</option>
+        <option value="Average">Average</option>
+       </select>
            
-         <div className='experience-rating'>
-          <input type='checkbox' id='exellent'/>
-          <label for="exellent">Exellent</label> &nbsp;
-          <input type='checkbox' id='good'/>
-          <label for="good">Good</label> &nbsp;
-          <input type='checkbox' id='fair'/>
-          <label for="fair">Fair</label> &nbsp;
-          <input type='checkbox' id='bad'/>
-          <label for="bad">Bad</label> &nbsp;
-         </div>
+         
 
            <h1 className='rating'>Rate Us</h1>
             <div className='start-img-container'>
               <img src= {imgStar} alt='star' className='img-star'
-                onClick= {changeImg}
+                
               />
               <img src= {imgStar} alt='star' className='img-star'/>
               <img src= {imgStar} alt='star' className='img-star'/>
@@ -74,12 +88,17 @@ function Feedback() {
 
 
           <h2 className='tittle'>Do you have any suggestion to improve our website</h2> 
-          <input type='text' placeholder='write your suggestion' className='suggestion-input'/> 
+          <input type='text' placeholder='write your suggestion' className='suggestion-input' value={suggestion}
+          onChange={(e)=>{
+            setSuggestion(e.target.value)
+          }}
+          /> 
 
-          <button type='botton' className='Feedback-btn'>Send</button>   
+          <button type='botton' className='Feedback-btn' onClick={addReview}>Send</button>   
       </form>
+      
     </div>
-    
+
   )
 }
 

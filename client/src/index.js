@@ -15,6 +15,7 @@ import Signupform from "./views/Signup/Signupform.js";
 import SearchPage from "./views/SearchPage/SearchPage.js";
 import Dashboard from "./views/Dashboard/Dashboard.js";
 import Feedback from "./components/Feedback/Feedback.js";
+import Reviews from "./views/Reviews/Reviews.js";
 
 
 const router = createBrowserRouter([
@@ -52,7 +53,12 @@ const router = createBrowserRouter([
   {
     path:'/feedback',
     element:<Feedback/>
+  },
+  {
+    path:'/review',
+    element:<Reviews/>
   }
+
   // {
   //   path: "*",
   //   element: <Home />, 

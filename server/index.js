@@ -4,6 +4,7 @@ import  mongoose  from "mongoose";
 import UserModel from "./models/User.js";
 import MovieModel from "./models/MoviesData.js";
 import Contact from "./models/Contact.js";
+import Review from "./models/review.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -175,6 +176,120 @@ app.delete("/contacts/:id", async(req, res)=>{
 //   ).then(data=>console.log("connected")).catch(err=>console.log(err));
 // };
 // connectDb();
+
+// review api start here
+
+app.post("/reviews", async(req, res)=>{
+  const {name, e_mail, experience, suggestion} = req.body;
+
+  if(!name){
+   return res.json({
+       success:false,
+       message:"name is required",
+       data:null
+   })
+  }
+
+  if(!e_mail){
+   return res.json({
+       success:false,
+       message:"E-mail is required",
+       data:null
+   })
+  }
+
+  if(!experience){
+   return res.json({
+       success:false,
+       message:"experience is required",
+       data:null
+   })
+  }
+
+  if(!suggestion){
+   return res.json({
+       success:false,
+       message:"suggestion is required",
+       data:null
+   })
+  }
+
+  if(!name){
+   return res.json({
+       success:false,
+       message:"name is required",
+       data:null
+   })
+  }
+
+  const newReview = await Review.create({
+   "name":name,
+   "e_mail":e_mail, 
+   "experience":experience,
+   "suggestion":suggestion
+  })
+
+  
+
+   res.json({
+       success:true,
+       message:"Review added successfully",
+       data: newReview
+   })
+});
+
+app.get("/reviews", async(req, res)=>{
+
+   const reviews =await Review.find();
+    res.json({
+       success:true,
+       message:"Review fetched succesfuly",
+       data:reviews
+    })
+})
+
+app.get("/reviews/:id",async(req, res)=>{
+    const {id}= req.params;
+
+    const review = await Review.findById(id);
+
+    res.json({
+       success:true,
+       message:"Review fetched successfull",
+       data:review
+    })
+})
+
+app.put("/reviews/:id", async(req, res)=>{
+    const  {id}= req.params;
+
+    const {name, e_mail, experience, suggestion} =req.body;
+    await Review.updateOne({_id:id},{$set:{
+       name:name,
+       e_mail:e_mail,
+       experience:experience,
+       suggestion:suggestion
+    }})
+
+    res.json({
+       success:true,
+       message:"Reviews update successfully",
+       data:null
+    })
+
+})
+
+app.delete("/reviews/:id", async(req,res)=>{
+   const {id} = req.params;
+
+   await Review.deleteOne({_id:id})
+
+   res.json({
+       success:true,
+       message:"Reviews delete successfully",
+       data:null
+   })
+})
 
 app.listen(PORT, () => { 
   console.log(`Server is running on port ${PORT}.`);
