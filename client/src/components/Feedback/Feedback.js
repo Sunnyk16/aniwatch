@@ -30,7 +30,7 @@ function Feedback() {
 
   return (
     <div className='feedback-container'>
-      <h1 className='header'>Share Your Feedback</h1>
+      <h1 className='feed-header'>Share Your Feedback</h1>
      
       <form className='feedback-form'>
 

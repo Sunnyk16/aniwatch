@@ -19,6 +19,7 @@ import Dashboard from "./views/Dashboard/Dashboard.js";
 import ContactsView from "./views/ContactsView/ContactsView.js";
 import Feedback from "./components/Feedback/Feedback.js";
 import Movie from "./views/Movie/Movie.js";
+import Reviews from "./views/Reviews/Reviews.js";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
     path: "/aboutus",
     element: <Aboutus/>,
   },
+  {
+    path:"/review",
+    element:<Reviews/>
+  }
   // {
   //   path: "*",
   //   element: <Home />,

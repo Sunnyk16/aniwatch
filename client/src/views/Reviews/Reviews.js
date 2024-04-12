@@ -19,7 +19,9 @@ function Reviews() {
     }, [])
   return (
     <div>
-      <h1>Our Review</h1>
+      <h1 className='header'>Our Review</h1>
+      <div className='review-cards-container'>
+      
       {
         
         reviews.map((review)=>{
@@ -27,16 +29,16 @@ function Reviews() {
             const {_id, name, e_mail, experience, suggestion } = review;
 
           return(
-          <div className='review-cards-container'>
-            <div className='review-cards'>
+          
                 <ReviewCard key={_id} name={name} e_mail={e_mail} experience={experience} suggestion={suggestion}/>
-             </div>
-          </div>
+
           )
         })
         
       }
     </div>
+    </div>
+    
   )
 }
 

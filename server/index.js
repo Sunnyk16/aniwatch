@@ -5,6 +5,7 @@ import UserModel from "./models/User.js";
 import MovieModel from "./models/MoviesData.js";
 import Contact from "./models/Contact.js";
 import Dashboard from "./models/Dashboard.js";
+import Review from "./models/Review.js";
 import dotenv from "dotenv";
 dotenv.config();
 

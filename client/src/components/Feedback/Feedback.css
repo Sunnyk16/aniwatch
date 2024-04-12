@@ -6,7 +6,7 @@
     justify-content:center;
     height:100vh;
 }
-.header{
+.feed-header{
     text-align: center;
     color: white;
     margin-top: 30px;
@@ -36,6 +36,7 @@
     padding: 10px;
     margin-top: 10px;
     border-radius: 7px;
+    color: black;
 }
 .customer-email-info{
     margin-top: 10px;
@@ -49,6 +50,7 @@
     padding: 10px;
     margin-top: 10px; 
     border-radius: 7px;
+    color: black;
 }
 .customer-rating{
     display: flex;
@@ -79,6 +81,7 @@
     border-radius: 7px;
     display: block;
     margin: 0 auto;
+    color: black;
 }
 .experience-rating{
     display: flex;
@@ -113,6 +116,7 @@
     display: block;
     margin: 0 auto;
     border-radius: 5px;
+    color: black;
 }
 .Feedback-btn{
     display: block;
