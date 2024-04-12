@@ -48,7 +48,7 @@ function Signupform() {
               placeholder="Enter Name"
               autoComplete="off"
               name="name"
-              className=" w-100 p-3 rounded-1 "
+              className=" w-100 p-3 rounded-1 text-dark"
               onChange={(e) => setName(e.target.value)}
             />      
           </div>
@@ -63,7 +63,7 @@ function Signupform() {
               placeholder="Enter Email"
               autoComplete="off"
               name="email"
-              className="w-100 p-3 rounded-1"
+              className="w-100 p-3 rounded-1 text-dark"
               onChange={(e) => setEmail(e.target.value)}
             />         
           </div>
@@ -75,7 +75,7 @@ function Signupform() {
               type="password"
               placeholder="Enter Password"
               name="password"
-              className="w-100 p-3 rounded-1"
+              className="w-100 p-3 rounded-1 text-dark"
               onChange={(e) => setPassword(e.target.value)}
             />          
           </div>
