@@ -37,6 +37,16 @@
     margin: 0 30px;
     margin-top: 120px;
 }
+
+.github{
+    height:30px;
+}
+
+.Team-img{
+    
+    height: 250px;
+   
+}
    
 
 @keyframes changeImage{
@@ -73,5 +83,7 @@
         margin: 0 30px;
         margin-top: 120px;
     }
+
+    
 
 }
